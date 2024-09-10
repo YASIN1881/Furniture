@@ -1,0 +1,214 @@
+@media screen and (max-width: 1400px){
+    .browse__images{
+        flex-direction: column;
+        flex-shrink: 3;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .discover__card{
+        display: none;
+    }
+    .collection__images{
+        width: 40rem;
+        height: 129rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .row-items{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .beautify__content{
+        margin: 0;
+        align-items: center;
+    }
+    .beautify__shape{
+        right: 14rem;
+    }
+    .beauty__imgs{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .nav__item{
+        margin-right: 3.5rem;
+    }
+    .services__wrapper{
+        height: 40rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .boxes{
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    .box{
+        width: 100%;
+    }
+    .beautify__shape{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .logo{
+        font-size: 2rem;
+    }
+    .nav__item{
+        margin-right: 1.5rem;
+    }
+    .nav__link{
+        font-size: 1.5rem;
+    }
+    .collection__title{
+        font-size: 2.2rem;
+    }
+    .collection__caption{
+        font-size: 1.5rem;
+    }
+    .browse__title{
+        font-size: 2.2rem;
+    }
+    .browse__caption{
+        font-size: 1.5rem;
+    }
+    .browse-img__name{
+        font-size: 2rem;
+    }
+    .work__title{
+        font-size: 2.2rem;
+    }
+    .work__caption{
+        font-size: 1.5rem;
+    }
+    .products__title{
+        font-size: 2.2rem;
+    }
+    .products__caption{
+        font-size: 1.5rem;
+    }
+    .products__submit{
+        width: 45rem;
+    }
+    .products__email{
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .nav__items{
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        width: 90%;
+        margin: 0 auto;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0; /*24rem*/
+        opacity: 0;
+        overflow: hidden;
+        transition: all 250ms ease-in;
+        z-index: 99;
+    }
+    .mobile-nav__items{
+        height: 24rem;
+        opacity: 1;
+    }
+    .nav__item{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .nav__item:first-child{
+        margin-top: 2rem;
+    }
+    .nav__mobile{
+        display: flex;
+    }
+    .beautify__img{
+        width: 40rem;
+    }
+    .img{
+        width: 34rem;
+        height: 44rem;
+    }
+    .box-img__wrapper{
+        width: 34rem;
+        height: 44.5rem;
+    }
+    .work-box__img{
+        width: 34rem;
+        height: 44.5rem;
+        object-fit: cover;
+    }
+    .work-box__number{
+        bottom: -3rem;
+    }
+    .work-box__title{
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+    .work-box__description{
+        font-size: 1.6rem;
+    }
+    .products__submit{
+        width: 40rem;
+    }
+    .products__email{
+        padding: 1rem;
+    }
+    .beauty__link{
+        display: block;
+    }
+    .beauty__title,
+    .beauty__caption,
+    .beauty__link{
+        text-align: center;
+    }
+    .beauty__caption{
+        max-width:20rem;
+        margin: 0 auto;
+    }
+    .beauty__img,
+    .instagram{
+        display: none;
+    }
+}
+@media screen and (max-width: 465px){
+    .collection__images{
+        width: 30rem;
+    }
+    .collection__img{
+        width: 25rem;
+    }
+    .beautify__img{
+        width: 30rem;
+    }
+    .products__email{
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 390px){
+    .img{
+        width: 30rem;
+        height: 40rem;
+    }
+    .box-img__wrapper{
+        width: 30rem;
+        height: 40.5rem;
+    }
+    .work-box__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

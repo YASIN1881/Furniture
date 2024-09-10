@@ -1,0 +1,578 @@
+@import "Reset.css";
+@import "fonts.css";
+@import "grid.css";
+
+
+:root{
+    --primary-font:"Montserrat";
+    --secondary-font:"Montserrat Bold";
+    --third-font:"Montserrat SemiBold";
+    --app-bg: #FFFFFF;
+    --primary-color: #054C73;
+    --secondary-color: #F2F5FF;
+    --card-background: #DFE9F4;
+    --first-txt-color: #333333;
+    --second-text-color: #666666;
+    --third-text-color: #111111;
+}
+
+
+/*
+
+-- Reset Styles
+
+*/
+
+a{
+    text-decoration: none;
+    color: var(--first-txt-color);
+}
+
+/*
+
+-- Componet
+
+*/
+
+.btn{
+    width: 20rem;
+    height: 6rem;
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+    color: var(--app-bg);
+    border-radius: 10rem;
+    border: none;
+    text-align: center;
+}
+
+
+/*
+
+-- App
+
+*/
+
+html{
+    font-size: 10px; /* 62.5% ===> 1rem ====> 16px*/
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+
+/*
+
+-- Header
+
+*/
+
+.header{
+
+}
+.nav{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 3.5rem;
+}
+.nav__items{
+    display: flex;
+}
+.nav__item{
+    margin-right: 4.5rem;
+}
+.nav__item:last-child{
+    margin-right: 0;
+}
+.nav__link{
+    font-size: 1.5rem;
+    font-family: var(--third-font);
+    transition: color 250ms ease-in;
+}
+.nav__link:hover{
+    color: var(--primary-color);
+}
+.nav__mobile{
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    align-items: center;
+}
+.nav__line{
+    position: relative;
+    transition: color 150ms ease-in;
+}
+.nav__line,
+.nav__line::after,
+.nav__line::before{
+    content: '';
+    width: 3.5rem;
+    height: 0.4rem;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+}
+.nav__line::after{
+    position: absolute;
+    top: 1rem;
+    transition: all 250ms ease-in;
+}
+.nav__line::before{
+    position: absolute;
+    bottom: 1rem;
+    transition: all 250ms ease-in;
+}
+.mobile--open .nav__line{
+    background-color: transparent;
+}
+.mobile--open .nav__line::after{
+    transform: translateY(-1rem) rotate(-45deg);
+}
+.mobile--open .nav__line::before{
+    transform: translateY(1rem) rotate(45deg);
+}
+
+
+/*
+==================
+-- Discover
+==================
+*/
+
+.discover__img{
+    background: url("../Images/Mask\ Group.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 90rem;
+    position: relative;
+}
+.discover__card{
+    width: 65rem;
+    height: 44rem;
+    background-color: var(--card-background);
+    color: #333333;
+    padding: 4rem;
+    position: absolute;
+    top: 30rem;
+    right: 24rem;
+    border-radius: 1.2rem;
+}
+.card__name{
+    font-family: var(--third-font);
+    font-size: 1.6rem;
+}
+.card__title{
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 3.5rem;
+    max-width: 30rem;
+    padding: 2rem 0;
+}
+.card__caption{
+    font-family: "Montserrat Medium";
+    max-width: 55rem;
+    line-height: 3.5rem;
+    font-size: 1.8rem;
+}
+.card__btn{
+    margin-top: 4rem;
+}
+
+
+/*
+==================
+-- Services
+==================
+*/
+
+.services{
+    background-color: var(--secondary-color);
+}
+.services__wrapper{
+    height: 15rem;
+    display: flex;
+    align-items: center;
+}
+.boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box{
+    color: var(--first-txt-color);
+    display: flex;
+    max-width: 32rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+.box__title{
+    font-family: var(--third-font);
+    font-size: 2rem;
+
+}
+.box__caption{
+    font-size: 1.5rem;
+}
+
+
+/*
+==================
+-- Collection
+==================
+*/
+
+.collection{
+    margin-top: 5rem;
+}
+.collection__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.collection__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.collection__title{
+    font-family: var(--secondary-font);
+    font-size: 3.2rem;
+}
+.collection__caption{
+    font-family: var(--primary-font);
+    color: #666666;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.collection__images{
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 114rem;
+    height: 47.2rem;
+}
+.collection__img{
+    width: 35rem;
+    height: 43rem;
+    transition: all 250ms ease-in;
+}
+.collection__img:nth-child(1){
+    background: url("../Images/collection-1.jpg") no-repeat;
+    border-top-left-radius: 6rem;
+}
+.collection__img:nth-child(1):hover{
+    transition: all 250ms ease-in;
+    border-top-left-radius: 0;
+    align-self: center;
+}
+.collection__img:nth-child(2){
+    background: url("../Images/collection-2.jpg") no-repeat;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+}
+.collection__img:nth-child(2):hover{
+    transition: all 250ms ease-in;
+    border-radius: 0;
+    align-self: center;
+}
+.collection__img:nth-child(3){
+    background: url("../Images/collection-3.jpg") no-repeat;
+    background-position: center;
+    border-bottom-right-radius: 6rem;
+}
+.collection__img:nth-child(3):hover{
+    transition: all 250ms ease-in;
+    border-radius: 0;
+    align-self: center;
+}
+
+
+/*
+================
+-- Beautify
+================
+*/
+.align-items{
+    display: flex;
+    align-items: center;
+}
+.beautify{
+    margin-top: 6rem;
+    padding: 6rem 0;
+    background-color: var(--secondary-color);
+}
+.beautify__content{
+    display: flex;
+    flex-direction: column;
+}
+.beautify__title{
+    font-family: var(--secondary-font);
+    font-size: 3.2rem;
+}
+.beautify__caption{
+    font-family: var(--primary-font);
+    color: #666666;
+    font-size: 2rem;
+    max-width: 49.4rem;
+    margin: 1rem 0;
+}
+.beautify__btn{
+    margin-top: 1rem;
+}
+.beautify__img{
+    width: 50rem;
+    height: 75.4rem;
+    background: url("../Images/beauti.jpg");
+    border-radius: 5rem 1.2rem 5rem 1.2rem;
+    transition: all 250ms ease-in;
+    position: relative;
+    z-index: 100;
+}
+.beautify__img:hover{
+    border-radius: 0;
+    transition: all 250ms ease-in;
+}
+.beautify__shape{
+    width: 37rem;
+    height: 37rem;
+    border-radius: 50%;
+    background-color: #09513B;
+    position: absolute;
+    top: 22rem;
+    right: 0rem;
+    bottom: 0;
+    z-index: 99;
+}
+
+
+/*
+================
+-- Browse
+================
+*/
+
+.browse{
+    margin-top: 5rem;
+    border-bottom: 1px solid #D7D6D6;
+}
+.browse__content{
+    text-align: center;
+}
+.browse__title{
+    font-family: var(--secondary-font);
+    font-size: 3.2rem;
+}
+.browse__caption{
+    font-family: var(--primary-font);
+    color: #666666;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.browse__images{
+    margin: 6rem auto;
+}
+.align-img{
+    justify-content: center;
+    align-items: center;
+}
+.browse__img{
+    font-family: var(--third-font);
+    color: var(--first-txt-color);
+    text-align: center;
+
+}
+.img{
+    width: 38rem;
+    height: 48rem;
+    border-radius: 1.2rem;    
+}
+.browse-img__name{
+    margin-top: 2rem;
+    font-size: 2.4rem;
+}
+
+
+/*
+================
+-- Work
+================
+*/
+
+.work{
+    margin-top: 5rem;
+}
+.work__content{
+    text-align: center;
+}
+.work__title{
+    font-family: var(--secondary-font);
+    font-size: 3.2rem;
+}
+.work__caption{
+    font-family: var(--primary-font);
+    color: #666666;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.work__images{
+    margin: 6rem auto;
+}
+.align-box{
+    justify-content: center;
+    align-items: center;
+}
+.work-box{
+    text-align: center;
+}
+.box-img__wrapper{
+    width: 38rem;
+    height: 44.5rem;
+    position: relative;
+}
+.work-box__number{
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 100%;
+    background-color: var(--third-text-color);
+    font-family: var(--secondary-font);
+    color: var(--app-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: 12px solid #FCFCFC;
+}
+.work-box__title{
+    font-family: var(--secondary-font);
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+.work-box__description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 32.1rem;
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+
+
+/*
+================
+-- Products
+================
+*/
+
+.products{
+    background-color: var(--secondary-color);
+    margin-top: 12rem;
+    padding-bottom: 2rem;
+}
+.products__content{
+    text-align: center;
+    padding-top: 5rem;
+}
+.products__title{
+    font-family: var(--secondary-font);
+    font-size: 3.2rem;
+}
+.products__caption{
+    font-family: var(--primary-font);
+    color: #666666;
+    font-size: 2rem;
+    margin: 1rem auto 0 auto;
+    max-width: 50rem;
+}
+.wrapper__submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.products__submit{
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 47rem;
+    height: 8rem;
+    border: 0.3rem solid var(--primary-color);
+    border-radius: 0.4rem;
+}
+.products__email{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.products__button{
+    height: 100%;
+    border-radius: 0.2rem;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+}
+
+
+/*
+================
+-- Footer
+================
+*/
+.footer{
+    background-color: var(--primary-color);
+}
+.beauty{
+    padding: 4rem 0 1rem 0;
+}
+.beauty__title,
+.beauty__link{
+    color: #fff;
+    font-family: var(--secondary-font);
+    font-size: 2.4rem;
+}
+.beauty__caption{
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    padding: 2rem 0 1rem 0;
+    max-width: 32rem;
+}
+.beauty__imgs{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.beauty__img{
+    /* width: 100%; */
+}
